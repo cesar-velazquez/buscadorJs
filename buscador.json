@@ -1,0 +1,38 @@
+[
+    {
+        "id": "recurso-01",
+        "titulo": "Relacionar columnas",
+        "descripcion": "Esta actividad permite relacionar frases o expresiones atendiendo a un criterio.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/relacionar/relacionar.html",
+        "download": "sitio-descarga"
+    },
+    {
+        "id": "recurso-02",
+        "titulo": "Verdadero-falso",
+        "descripcion": "Esta actividad permite validar una afirmación de acuerdo a criterios establecidos.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/verdadero-falso/verdadero-falso.html",
+        "download": "sitio-descarga"
+    },
+    {
+        "id": "recurso-03",
+        "titulo": "Quiz",
+        "descripcion": "Genere una actividad con preguntas o enunciados con varias posibles respuestas.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "https://www.uv.mx/celulaode/Recursos-Actualizados/opcionmultiple/index.html",
+        "download": "sitio-descarga"
+    }
+]
