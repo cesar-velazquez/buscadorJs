@@ -34,5 +34,17 @@
         ],
         "siteweb": "https://www.uv.mx/celulaode/Recursos-Actualizados/opcionmultiple/index.html",
         "download": "sitio-descarga"
+    },
+    {
+        "id": "recurso-04",
+        "titulo": "Selección única",
+        "descripcion": "Esta actividad permite seleccionar una respuesta correcta para cada pregunta.",
+        "tags": [
+            "pensamiento crítico",
+            "relacionar",
+            "utilidad"
+        ],
+        "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/seleccion-unica-version2/seleccion.html",
+        "download": "sitio-descarga"
     }
 ]
