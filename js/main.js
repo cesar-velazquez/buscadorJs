@@ -1,5 +1,4 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // Función Login Falso 
 const users = [
     {
@@ -24,6 +23,7 @@ const users = [
     },
 ];
 // 
+
 let userInput = document.getElementById('user');
 let passInput = document.getElementById('password');
 let btnLogin = document.getElementById('signIn');
