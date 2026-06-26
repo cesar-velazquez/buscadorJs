@@ -12,8 +12,6 @@ function finishSession() {
     window.location.href = 'index.html';
 }
 
-
-
 closeSession.addEventListener('click', () => {
     finishSession();
 });
