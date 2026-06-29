@@ -1,4 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 // Función Login Falso 
 const users = [
     {
@@ -29,6 +31,30 @@ let passInput = document.getElementById('password');
 let btnLogin = document.getElementById('signIn');
 let showError = document.getElementById("errorLogin");
 let hiddenError = document.getElementById("removeLogin");
+const btnPassword = document.getElementById('btnPassword');
+
+const eyeClosed = document.getElementById('eyeClosed');
+const eyeOpen = document.getElementById('eyeOpen');
+function showPass() {
+    // console.log("es contrasena");
+    if (passInput.type === 'password') {
+        passInput.setAttribute('type', 'text');
+        eyeClosed.classList.add('hidden');
+        eyeOpen.classList.remove('hidden');
+    } else {
+        passInput.setAttribute('type', 'password');
+        eyeClosed.classList.remove('hidden');
+        eyeOpen.classList.add('hidden');
+    }
+}
+
+btnPassword.addEventListener('click', (e) => {
+    e.preventDefault();
+    showPass()
+    // passInput.setAttribute('type', 'text');
+
+});
+
 
 btnLogin.addEventListener('click', validateAccount);
 
@@ -54,5 +80,12 @@ function hiddenMessageError(event) {
 }
 
 function showMessageError() {
-    showError.classList.remove('hidden');
+    userInput.value = '';
+    passInput.value = '';
+
+    showError.classList.remove('translate-y-20', 'opacity-0', 'invisible');
+
+    setTimeout(() => {
+        showError.classList.add('translate-y-20', 'opacity-0', 'invisible')
+    }, 3000);
 }

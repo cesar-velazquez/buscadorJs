@@ -1,22 +1,31 @@
 /******Diseño de tarjeta*********/
-
+.notInfo {
+    display: flex;
+    justify-content: center;
+}
 .non-information {
-    background-color: beige;
-    width: 90%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
     min-height: 300px;
     padding: 2rem;
     border-radius: .5rem;
     font-size: 20px;
     text-align: center;
 }
-.design-tarjet{
-    background-color: antiquewhite;
-    padding: 1rem 2rem;
-    border-radius: .5rem;
-    display: flex;
-    flex-direction: column;
+
+.structureInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    width: 30%;
+    padding: 1rem;
+}
+
+.design-tarjet {
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    min-height: 300px;
+    position: relative;
 }
 
 .title-tarjet {
@@ -24,15 +33,42 @@
 }
 
 .openResource {
-    background-color: aquamarine;    
+    background-color: #3B82F6;
+    color: white;
     border-radius: .5rem;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: .5rem 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
+
 .openResource:hover {
     background-color: black;
     color: white;
     transition: 0.5s;
+}
+
+@media screen and (max-width: 991px) {
+    .design-tarjet {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .design-tarjet {
+        width: 40%;
+        padding: 1rem;
+    }
+
+    .openResource {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .design-tarjet {
+        width: 100%;
+    }
 }

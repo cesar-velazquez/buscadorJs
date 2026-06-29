@@ -6,7 +6,7 @@ const user = localStorage.getItem('nameUser');
 if (!user) {
     window.location.href = '../../index.html';
     console.log("DESDE aquí");
-}
+}   
 
 // function finishSession() {
 //     localStorage.removeItem('nameUser');

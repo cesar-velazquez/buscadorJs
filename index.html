@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--  -->
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Inicio Sesión</title>
@@ -11,17 +17,17 @@
 
 <body class="max-w-[1116px] m-auto">
 
-    <header class="border-2 border-gray-500/30 py-4 px-8 fixed right-0 left-0 z-10 bg-sky-800
-flex justify-between items-center">
+    <header class="border-2 border-gray-500/30 py-4 px-8 fixed right-0 left-0 z-10 bg-white
+flex justify-between items-center min-h-[80px]">
         <div class="logo">
-            <a class="font-bold" href="#">Mi Sitio Web</a>
+            <a class="font-bold text-3xl" href="#">[Mi Sitio Web]</a>
         </div>
 
         <nav class="">
             <ul class="flex gap-4 justify-center items-center">
-                <li><a class="font-bold" href="#">Inicio</a></li>
-                <li><a class="font-bold" href="#">Servicios</a></li>
-                <li><a class="font-bold" href="#">Contacto</a></li>
+                <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+                <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+                <li><a class="font-bold text-xl" href="#">Contacto</a></li>
                 <li id="cart"><i class='text-xl bx bxs-cart cursor-pointer hover:text-red-400 relative '>
                         <span id="numItem" class="absolute z-10 text-xl"></span>
                     </i></li>
@@ -32,30 +38,49 @@ flex justify-between items-center">
     <!-- <h1 class="font-bold text-4xl text-center ">Login</h1> -->
     <main class="flex margin-auto justify-center items-center min-h-screen ">
 
-        <form action="" class="darkForm mb-10 px-4 py-8 bg-white rounded-2xl flex flex-col gap-4 justify-center items-end relative border-4 border-red-600 ">
-            <h1 class="text-center font-bold m-auto  ">Iniciar sesión</h1>
-            <div class="flex justify-center items-center gap-4">
-                <label class="darkLabel font-bold text-black " for="">Usuario</label>
-                <input class="rounded-lg p-2 border-2 border-red-600 " type="text" name="user" id="user"
-                    placeholder="Escribe tu correo...">
+        <form action=""
+            class="darkForm mb-10 px-8 py-8 bg-white rounded-lg flex flex-col gap-4 justify-center items-center relative w-[400px] relative ">
+            <h1 class="text-center font-bold m-auto text-3xl  ">Iniciar sesión</h1>
+            <div id="errorLogin" class="bg-red-100 flex gap-4 items-center justify-center px-4 py-2 border-2 border-red-800 rounded-lg 
+            absolute top-16 
+            transition-all duration-500 transform translate-y-20 opacity-0 invisible  ">
+                <p class="text-sm  text-red-950  ">Usuario y/o contraseña incorrectos</p>
+                <button id="removeLogin" class="text-red-950">x</button>
             </div>
-            <div class="flex justify-center items-center gap-4">
-                <label class="darkLabel font-bold text-black  " for="">Contraseña</label>
-                <input id="password" class="rounded-lg p-2 border-2 border-red-600" type="password"
-                    placeholder="Escribe tu contraseña...">
-            </div>            
 
-            <input id="signIn"
-                class=" border-2 border-red-600 font-bold text-black m-auto border-2 py-2 px-4 rounded-xl hover:bg-white hover:text-black cursor-pointer hover:border-2 "
-                type="submit" value="Sign In">
-
-            <div id="errorLogin" class="absolute bg-black/50 p-4 top-0 left-0 right-0 bottom-0 rounded-xl hidden
-            flex justify-center items-center flex-col gap-6">
-                <p class="text-center font-bold text-white  ">Stop 🤯!</p>
-                <button id="removeLogin"
-                    class="bg-red-800 text-white font-bold px-5 py-2 rounded-lg hover:bg-white hover:text-red-700">Incorrect
-                    Credentials</button>
+            <div class="flex flex-col w-[100%] gap-1 ">
+                <label class="darkLabel font-bold text-black text-xl " for="">Usuario</label>
+                <div class="relative ">
+                    <img class="w-[18px] absolute left-2 top-1/2 -translate-y-1/2 " src="./img/userSolidB.png"
+                        alt="User Icon">
+                    <input class="rounded-lg pIcons border-2 border-black/50 w-full
+                    focus:shadow-lg  focus:shadow-blue-500/20 focus:border-blue-700 focus:outline-none
+                    " type="text" name="user" id="user" placeholder="Escribe tu correo...">
+                </div>
             </div>
+            <div class="flex flex-col w-[100%] gap-1 ">
+                <label class="darkLabel font-bold text-black text-xl " for="">Contraseña</label>
+
+                <div class="relative bg-red-100">
+                    <button tabindex="-1" id="btnPassword"
+                        class="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 ">
+                        <img id="eyeClosed" class="w-[18px] " src="./img/eyeClosed.png" alt="Password Icon">
+                        <img id="eyeOpen" class="w-[18px] hidden " src="./img/eyeOpen.png" alt="Password Icon">
+                    </button>
+                    <input id="password" class="rounded-lg pIcons border-2 border-black/50 w-full
+                        focus:shadow-lg  focus:shadow-blue-500/20 focus:border-blue-700 focus:outline-none"
+                        type="password" placeholder="Escribe tu contraseña..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="w-full ">
+                <p class="text-sm text-right "><a class="text-gray-700" href="#">¿Olvidaste tu contraseña?</a></p>
+            </div>
+
+            <input id="signIn" class="bg-red-800 text-white rounded-lg font-bold w-full py-3 border-2 border-red-800 hover:bg-white hover:text-red-800 hover:cursor-pointer 
+                transition duration-300" type="submit" value="Entrar">
+
+
         </form>
     </main>
 
