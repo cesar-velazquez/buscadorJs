@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
 }
+
 .non-information {
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -16,8 +17,7 @@
 .structureInfo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 1rem;    
 }
 
 .design-tarjet {
@@ -50,24 +50,23 @@
 }
 
 @media screen and (max-width: 991px) {
-    .design-tarjet {
-        width: 50%;
+    .structureInfo {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .design-tarjet {
-        width: 40%;
-        padding: 1rem;
-    }
-
     .openResource {
-        width: 40%;
+        width: auto;
         margin: auto;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .structureInfo {
+        grid-template-columns: 1fr;
+    }
+
     .design-tarjet {
         width: 100%;
     }

@@ -1,6 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // Función Login Falso 
 const users = [
     {
@@ -37,7 +36,7 @@ const eyeClosed = document.getElementById('eyeClosed');
 const eyeOpen = document.getElementById('eyeOpen');
 function showPass() {
     // console.log("es contrasena");
-    if (passInput.type === 'password') {
+    if (passInput.type === 'password' && passInput.value.length != 0) {
         passInput.setAttribute('type', 'text');
         eyeClosed.classList.add('hidden');
         eyeOpen.classList.remove('hidden');

@@ -12,28 +12,45 @@
     <!--  -->
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Inicio Sesión</title>
 </head>
 
 <body class="max-w-[1116px] m-auto">
 
-    <header class="border-2 border-gray-500/30 py-4 px-8 fixed right-0 left-0 z-10 bg-white
-flex justify-between items-center min-h-[80px]">
+    <header class="border-2 border-gray-500/30 py-4 max-sm:px-4 px-8 fixed right-0 left-0 z-10 bg-white flex justify-between items-center min-h-[80px]">
         <div class="logo">
             <a class="font-bold text-3xl" href="#">[Mi Sitio Web]</a>
         </div>
 
         <nav class="">
-            <ul class="flex gap-4 justify-center items-center">
+            <ul class="sm:flex gap-4 justify-center items-center hidden  ">
                 <li><a class="font-bold text-xl" href="#">Inicio</a></li>
                 <li><a class="font-bold text-xl" href="#">Servicios</a></li>
                 <li><a class="font-bold text-xl" href="#">Contacto</a></li>
-                <li id="cart"><i class='text-xl bx bxs-cart cursor-pointer hover:text-red-400 relative '>
-                        <span id="numItem" class="absolute z-10 text-xl"></span>
-                    </i></li>
             </ul>
+
+            <div class="max-sm:block hidden">
+                <button id="menu" class="text-3xl  ">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
         </nav>
     </header>
+
+    <!-- Menu -->    
+    <div id="containerMenu" class="bg-white shadow-xl shadow-red-950/70 border-red-800 w-[60%] min-h-screen fixed z-10 right-0 top-[80px] 
+    transition-all duration-500 transform p-4 translate-x-20 opacity-0 invisible max-sm:block hidden
+    ">
+        <ul class="flex flex-col gap-4">
+            <li><a class="font-bold text-xl" href="#">Inicio</a></li>
+            <li><a class="font-bold text-xl" href="#">Servicios</a></li>
+            <li><a class="font-bold text-xl" href="#">Contacto</a></li>
+        </ul>
+    </div>
 
     <!-- <h1 class="font-bold text-4xl text-center ">Login</h1> -->
     <main class="flex margin-auto justify-center items-center min-h-screen ">
@@ -89,5 +106,6 @@ flex justify-between items-center min-h-[80px]">
 </body>
 
 <script src="./js/main.js"></script>
+<script src="./js/showMenu.js"></script>
 
 </html>
