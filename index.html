@@ -21,7 +21,8 @@
 
 <body class="max-w-[1116px] m-auto">
 
-    <header class="border-2 border-gray-500/30 py-4 max-sm:px-4 px-8 fixed right-0 left-0 z-10 bg-white flex justify-between items-center min-h-[80px]">
+    <header
+        class="border-2 border-gray-500/30 py-4 max-sm:px-4 px-8 fixed right-0 left-0 z-10 bg-white flex justify-between items-center min-h-[80px]">
         <div class="logo">
             <a class="font-bold text-3xl" href="#">[Mi Sitio Web]</a>
         </div>
@@ -41,7 +42,7 @@
         </nav>
     </header>
 
-    <!-- Menu -->    
+    <!-- Menu -->
     <div id="containerMenu" class="bg-white shadow-xl shadow-red-950/70 border-red-800 w-[60%] min-h-screen fixed z-10 right-0 top-[80px] 
     transition-all duration-500 transform p-4 translate-x-20 opacity-0 invisible max-sm:block hidden
     ">
@@ -59,7 +60,7 @@
             class="darkForm mb-10 p-8 max-md:p-4 bg-white rounded-lg flex flex-col gap-4 justify-center items-center relative w-[400px] relative ">
             <h1 class="text-center font-bold m-auto text-3xl  ">Iniciar sesión</h1>
             <div id="errorLogin" class="bg-red-100 flex gap-4 items-center justify-center px-4 py-2 border-2 border-red-800 rounded-lg 
-            absolute top-16 
+            absolute top-16 max-md:top-12
             transition-all duration-500 transform translate-y-20 opacity-0 invisible  ">
                 <p class="text-sm  text-red-950  ">Usuario y/o contraseña incorrectos</p>
                 <button id="removeLogin" class="text-red-950">x</button>
@@ -94,7 +95,8 @@
                 <p class="text-sm text-right "><a class="text-gray-700" href="#">¿Olvidaste tu contraseña?</a></p>
             </div>
 
-            <input id="signIn" class="bg-red-800 text-white rounded-lg font-bold w-full py-3 border-2 border-red-800 hover:bg-white hover:text-red-800 hover:cursor-pointer 
+            <input id="signIn" class="bg-red-800 text-white rounded-lg font-bold w-full py-3 border-2 border-red-800 
+            hover:bg-white hover:text-red-800 hover:cursor-pointer 
                 transition duration-300" type="submit" value="Entrar">
 
 
