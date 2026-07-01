@@ -9,7 +9,7 @@
             "utilidad"
         ],
         "siteweb": "./recursos/relacionar/relacionar.html",
-        "download": "sitio-descarga"
+        "download": "./zipRecursos/relacionar.zip"
     },
     {
         "id": "recurso-02",
@@ -21,7 +21,7 @@
             "utilidad"
         ],
         "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/verdadero-falso/verdadero-falso.html",
-        "download": "sitio-descarga"
+        "download": "./zipRecursos/verdadero-falso.zip"
     },
     {
         "id": "recurso-03",
@@ -33,7 +33,7 @@
             "utilidad"
         ],
         "siteweb": "https://www.uv.mx/celulaode/Recursos-Actualizados/opcionmultiple/index.html",
-        "download": "sitio-descarga"
+        "download": "./zipRecursos/memorama.zip"
     },
     {
         "id": "recurso-04",
@@ -45,6 +45,6 @@
             "utilidad"
         ],
         "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/seleccion-unica-version2/seleccion.html",
-        "download": "sitio-descarga"
+        "download": "./zipRecursos/seleccion-unica.zip"
     }
 ]

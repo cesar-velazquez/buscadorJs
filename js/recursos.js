@@ -33,27 +33,42 @@ function renderResults(data) {
             const div = document.createElement('div');
             const titulo = document.createElement('h2');
             const p = document.createElement('p');
+            const contenedorEnlaces = document.createElement('div');
             const openResource = document.createElement('a');
+            const downloadResource = document.createElement('a');
+            const imgDownload = document.createElement('img');
 
-            // divMayor.classList.add("structureInfo");
+            
             div.classList.add("design-tarjet");
             titulo.classList.add('title-tarjet');
-            openResource.classList.add('openResource')
+            contenedorEnlaces.classList.add('contenedor-enlaces');
+            openResource.classList.add('openResource')                                
             openResource.setAttribute("href", resp.siteweb);
             openResource.target = "_blank";
+            downloadResource.classList.add('downloadResource');
+            downloadResource.setAttribute("href", resp.download);
+            downloadResource.download = "";
+
+            imgDownload.classList.add('imgDownload');                       
+            imgDownload.setAttribute("src", "../img/download.png");
+            imgDownload.setAttribute("alt", "Descargar");
 
             titulo.textContent = resp.titulo;
             p.textContent = resp.descripcion;
-            openResource.textContent = "Abrir";
+            openResource.textContent = "Abrir";            
 
+            contenedorEnlaces.appendChild(downloadResource);
+            contenedorEnlaces.appendChild(openResource);
+            downloadResource.appendChild(imgDownload);
 
             div.appendChild(titulo);
             div.appendChild(p);
-            div.appendChild(openResource);
+            div.appendChild(contenedorEnlaces);
 
             contenedorElemento.classList.add('structureInfo');
             contenedorElemento.classList.remove('notInfo');
             contenedorElemento.appendChild(div);
+
         });
         console.log(contenedorElemento);
 

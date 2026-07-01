@@ -57,10 +57,6 @@ btnPassword.addEventListener('click', (e) => {
 
 btnLogin.addEventListener('click', validateAccount);
 
-hiddenError.addEventListener('click', hiddenMessageError);
-
-
-
 function validateAccount(event) {
     event.preventDefault();
     const foundUser = users.find(user => userInput.value === user.username && passInput.value === user.password);
@@ -73,10 +69,10 @@ function validateAccount(event) {
     }
 }
 
-function hiddenMessageError(event) {
-    event.preventDefault();
-    showError.classList.add('hidden');
-}
+// function hiddenMessageError(event) {
+//     event.preventDefault();
+//     showError.classList.add('invisible', 'opacity-0', 'translate-y-20');
+// }
 
 function showMessageError() {
     userInput.value = '';
