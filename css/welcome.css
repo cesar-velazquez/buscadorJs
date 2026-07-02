@@ -49,7 +49,8 @@
     border-radius: .5rem;
     font-weight: bold;
     padding: .5rem 1rem;
-    border: 2px solid #3B82F6;    
+    border: 2px solid #3B82F6;
+    cursor: pointer;    
 }
 
 .downloadResource {
@@ -58,6 +59,7 @@
     border-radius: .5rem;    
     padding: .5rem 1rem;
     border: 2px solid #3B82F6;
+    cursor: pointer;
 }
 
 .openResource:hover {

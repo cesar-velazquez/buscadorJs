@@ -57,7 +57,7 @@ function renderResults(data) {
             downloadResource.download = "";
 
             imgDownload.classList.add('imgDownload');
-            imgDownload.setAttribute("src", "../img/download.png");
+            imgDownload.setAttribute("src", "./img/download.png");
             imgDownload.setAttribute("alt", "Descargar");
 
             titulo.textContent = resp.titulo;
