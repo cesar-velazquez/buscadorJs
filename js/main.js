@@ -69,11 +69,6 @@ function validateAccount(event) {
     }
 }
 
-// function hiddenMessageError(event) {
-//     event.preventDefault();
-//     showError.classList.add('invisible', 'opacity-0', 'translate-y-20');
-// }
-
 function showMessageError() {
     userInput.value = '';
     passInput.value = '';

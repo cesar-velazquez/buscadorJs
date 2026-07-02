@@ -20,7 +20,7 @@
             "relacionar",
             "utilidad"
         ],
-        "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/verdadero-falso/verdadero-falso.html",
+        "siteweb": "./recursos/verdadero-falso/verdadero-falso.html",
         "download": "./zipRecursos/verdadero-falso.zip"
     },
     {
@@ -32,7 +32,7 @@
             "relacionar",
             "utilidad"
         ],
-        "siteweb": "https://www.uv.mx/celulaode/Recursos-Actualizados/opcionmultiple/index.html",
+        "siteweb": "./recursos/1-memorama/memorama.html",
         "download": "./zipRecursos/memorama.zip"
     },
     {
@@ -44,7 +44,7 @@
             "relacionar",
             "utilidad"
         ],
-        "siteweb": "https://www.uv.mx/celulaode/catalogo-plantillas/seleccion-unica-version2/seleccion.html",
+        "siteweb": "./recursos/seleccion-unica-version2/seleccion.html",
         "download": "./zipRecursos/seleccion-unica.zip"
     }
 ]

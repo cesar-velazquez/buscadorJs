@@ -1,17 +1,25 @@
 const closeSession = document.querySelectorAll('.btnLogOut');
 const user = localStorage.getItem('nameUser');
 
+const nameUserElement = document.getElementById('nameUser');
+if (nameUserElement) {
+    nameUserElement.textContent = `Usuario: ${user}`;
+}
+
+if (!user || user === 'undefined' || user === null) {
+    window.location.href = 'index.html';
+}
+
 closeSession.forEach(btn => {
     btn.addEventListener('click', finishSession);
-})
+});
 
-document.getElementById('nameUser').textContent = `Usuario: ${user}`;
-
-if (!user) {
-    window.location.href = 'index.html';
-}
-
-function finishSession() {
+function finishSession(e) {
+    if (e) e.preventDefault();
     localStorage.removeItem('nameUser');
-    window.location.href = 'index.html';
-}
+    const eventLogout = new CustomEvent('proyectoLogout');
+    window.dispatchEvent(eventLogout);
+    setTimeout(() => {
+        window.location.href = 'index.html';
+    }, 1000);
+};

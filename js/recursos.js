@@ -1,3 +1,4 @@
+const pestanasAbiertas = [];
 const tituloElemento = document.getElementById('titulo');
 const BASE_URL = "buscador.json";
 
@@ -8,7 +9,7 @@ async function getInformation() {
     try {
         const response = await fetch(BASE_URL);
         dataComplete = await response.json();
-        titulo.style.display = "none";
+        if (tituloElemento) tituloElemento.style.display = "none";
         renderResults(dataComplete);
     } catch (error) {
         console.log("Error al cargar los datos")
@@ -17,7 +18,6 @@ async function getInformation() {
 
 function renderResults(data) {
     const contenedorElemento = document.getElementById('contenedor-elementos');
-
     contenedorElemento.innerHTML = '';
     if (data.length === 0) {
         contenedorElemento.classList.remove('structureInfo');
@@ -37,25 +37,31 @@ function renderResults(data) {
             const openResource = document.createElement('a');
             const downloadResource = document.createElement('a');
             const imgDownload = document.createElement('img');
-
-            
             div.classList.add("design-tarjet");
             titulo.classList.add('title-tarjet');
             contenedorEnlaces.classList.add('contenedor-enlaces');
-            openResource.classList.add('openResource')                                
-            openResource.setAttribute("href", resp.siteweb);
-            openResource.target = "_blank";
+            openResource.classList.add('openResource')
+            openResource.textContent = "Abrir";
+
+            openResource.addEventListener('click', function (e) {
+                e.preventDefault();
+                const nuevaPestana = window.open(resp.siteweb, '_blank');
+                if (nuevaPestana) {
+                    pestanasAbiertas.push(nuevaPestana);
+                    console.log("pestañaAbierta: ", pestanasAbiertas);
+                }
+            });
+
             downloadResource.classList.add('downloadResource');
             downloadResource.setAttribute("href", resp.download);
             downloadResource.download = "";
 
-            imgDownload.classList.add('imgDownload');                       
+            imgDownload.classList.add('imgDownload');
             imgDownload.setAttribute("src", "../img/download.png");
             imgDownload.setAttribute("alt", "Descargar");
 
             titulo.textContent = resp.titulo;
             p.textContent = resp.descripcion;
-            openResource.textContent = "Abrir";            
 
             contenedorEnlaces.appendChild(downloadResource);
             contenedorEnlaces.appendChild(openResource);
@@ -68,13 +74,9 @@ function renderResults(data) {
             contenedorElemento.classList.add('structureInfo');
             contenedorElemento.classList.remove('notInfo');
             contenedorElemento.appendChild(div);
-
         });
-        console.log(contenedorElemento);
-
     }
 }
-
 
 //BUSCAR Info:
 let inputSearch = document.getElementById('inputSearch');
@@ -87,3 +89,24 @@ inputSearch.addEventListener('input', (e) => {
 })
 
 getInformation();
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btnLogOut') || e.target.closest('.btnLogOut')) {        
+        cerrarTodasLasPestanas();
+    }
+}, true); 
+
+window.addEventListener('storage', (event) => {
+    if (event.key === 'nameUser' && (!event.newValue || event.newValue === 'undefined')) {
+        cerrarTodasLasPestanas();
+        window.location.href = 'index.html';
+    }
+});
+
+function cerrarTodasLasPestanas() {    
+    pestanasAbiertas.forEach(pestana => {
+        if (pestana && !pestana.closed) {
+            pestana.close();
+        }
+    });
+}
